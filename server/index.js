@@ -22,7 +22,11 @@ mongoose
     console.log(error);
   });
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
+
+if (process.env.NODE_ENV == "production") {
+  app.use(express.static("client/build"));
+}
 
 app.listen(PORT, () => console.log("server is up and running..."));
 
