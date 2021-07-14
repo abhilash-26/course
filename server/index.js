@@ -26,4 +26,4 @@ const PORT = 8000;
 
 app.listen(PORT, () => console.log("server is up and running..."));
 
-app.use("/", api);
+app.use("/api", api);
